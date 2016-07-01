@@ -1,3 +1,20 @@
 .jumbotron {
     height: 30%;
 }
+
+#headline {
+    background-color: #f7f7f9;
+    height: 256px;
+}
+
+#search-box {
+    padding-top: 111px;
+}
+
+li {
+    border-right: solid 1px black;
+}
+
+li:last {
+    border: none;
+}
