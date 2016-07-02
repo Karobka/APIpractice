@@ -5,7 +5,7 @@ $(document).ready(function(){
     /** Get User input--Search with it*/
     $("#search-form").submit(function(event) {
         event.preventDefault();
-        var searchVal = ($("#search-input").val());
+        var searchVal = $("#search-input").val();
         getResults(searchVal);
     });
 
@@ -17,15 +17,17 @@ $(document).ready(function(){
             q: searchVal
         };
         url = 'https://www.googleapis.com/youtube/v3/search';
+        
         $.getJSON(url, params, function(data){
-            showResults(data.Search);
+            showResults(data.items[1]);  /**items is name of the array */
         });
     }
 
     /** Show the results */
     function showResults(results){
         $.each(results, function(index, value){
-            console.log(value.Title);
+            console.log(value.title);  /** title is a key in the object  */
+            $("#results").append("<p>" + value.title + "</p>");
         });
         
     }
