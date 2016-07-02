@@ -19,15 +19,15 @@ $(document).ready(function(){
         url = 'https://www.googleapis.com/youtube/v3/search';
         
         $.getJSON(url, params, function(data){
-            showResults(data.items[1]);  /**items is name of the array */
+            showResults(data.items);  /**items is name of the array */
         });
     }
 
     /** Show the results */
     function showResults(results){
         $.each(results, function(index, value){
-            console.log(value.title);  /** title is a key in the object  */
-            $("#results").append("<p>" + value.title + "</p>");
+            console.log(value.snippet.title);  /** title is a key in the object  */
+            $("#results").append("<p>" + value.snippet.title + "</p>");
         });
         
     }
