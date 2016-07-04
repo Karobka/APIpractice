@@ -14,6 +14,7 @@ $(document).ready(function(){
         var params = {
             part: 'snippet',
             key: 'AIzaSyBPiVRT11xTz9DGX_89oL4zizxSZGgiVSo',
+            maxResults: 6,
             q: searchVal
         };
         url = 'https://www.googleapis.com/youtube/v3/search';
@@ -27,8 +28,11 @@ $(document).ready(function(){
     function showResults(results){
         $.each(results, function(index, value){
             console.log(value.snippet.title);  /** title is a key in the object  */
-            $("#results").append("<p>" + value.snippet.title + "</p>");
-            $("#results").append("<p>" + "<img src=" + value.snippet.thumbnails.default.url + ">" + "</p>");
+            $("#results-row").append();
+            $("#results-row").append("<div class='col-md-4'>" + 
+                "<p>" + value.snippet.title + "</p>" +
+                "<span>" + "<img src=" + value.snippet.thumbnails.default.url + ">" + "</span>" + 
+                "</div>");
         });
         
     }
