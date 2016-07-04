@@ -32,8 +32,11 @@ $(document).ready(function(){
             console.log(value.snippet.title);  /** title is a key in the object  */
             $("#results-row").append();
             $("#results-row").append("<div class='col-md-4'>" + 
-                "<p>" + value.snippet.title + "</p>" +
-                "<span>" + "<img src=" + value.snippet.thumbnails.medium.url + ">" + "</span>" + 
+                "<h3>" + value.snippet.title + "</h3>" +
+                "<span>" + 
+                "<a href=" + 'https://www.youtube.com/watch?v=' + value.id.videoId + ">" +
+                "<img src=" + value.snippet.thumbnails.medium.url + ">" + "</span>" + 
+                "</a>" +
                 "</div>");
         });
         
