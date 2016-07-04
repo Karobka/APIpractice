@@ -28,6 +28,7 @@ $(document).ready(function(){
         $.each(results, function(index, value){
             console.log(value.snippet.title);  /** title is a key in the object  */
             $("#results").append("<p>" + value.snippet.title + "</p>");
+            $("#results").append("<p>" + "<img src=" + value.snippet.thumbnails.default.url + ">" + "</p>");
         });
         
     }
