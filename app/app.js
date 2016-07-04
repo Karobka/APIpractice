@@ -5,8 +5,10 @@ $(document).ready(function(){
     /** Get User input--Search with it*/
     $("#search-form").submit(function(event) {
         event.preventDefault();
+        $(".col-md-4").remove();
         var searchVal = $("#search-input").val();
         getResults(searchVal);
+        $("#search-input").val("");
     });
 
     /** Get info from youtube */
@@ -31,7 +33,7 @@ $(document).ready(function(){
             $("#results-row").append();
             $("#results-row").append("<div class='col-md-4'>" + 
                 "<p>" + value.snippet.title + "</p>" +
-                "<span>" + "<img src=" + value.snippet.thumbnails.default.url + ">" + "</span>" + 
+                "<span>" + "<img src=" + value.snippet.thumbnails.medium.url + ">" + "</span>" + 
                 "</div>");
         });
         
