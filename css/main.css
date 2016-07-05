@@ -1,20 +1,39 @@
+body {
+    background-color: #e8e8ee;
+}
+
+.container {
+    background-color: #f7f7f9;
+}
+
+
 .jumbotron {
     height: 30%;
+    
 }
 
 #headline {
     background-color: #f7f7f9;
-    height: 256px;
+    height: 384px;
+    background-image: url("../images/tubes.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #dedee0;
 }
 
 #banner-box {
     padding-top: 111px;
 }
 
-li {
-    border-right: solid 1px black;
+#results-row {
+    height: 40em;
 }
 
-li:last {
-    border: none;
+footer {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#message {
+    color: #dedee0;
 }

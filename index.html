@@ -16,10 +16,11 @@
 </head>
 <body>
   
-<div class="container-fluid">
+<div class="container">
   <!-- headline row -->
   <div class="row" id="headline">
     <div class="text-center" id="banner-box">
+      <h1>Search the tubes</h1>
       <form class="form-inline" id="search-form">
         <div class="form-group">
           <input type="text" class="form-control" id="search-input" placeholder="Soccer videos..." required></input>
@@ -30,13 +31,17 @@
   </div>
   <hr>
   <!-- results section -->
-  <div class="row" id="results">
-    <!-- first row -->
-    <div class="row text-center" id="results-row">
+  <div class="row text-center" id="results-row">
+    <div class="panel panel-default" id="message">
+      <div class="panel-body">
+        <h3>Please enter a search term to view the results...</h3>
+      </div>
     </div>
-    <hr>
-  </div>
+  </div>  
 </div>
+<footer class="text-center">
+  <p>Created for your enjoyment</p>
+</footer>
      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
